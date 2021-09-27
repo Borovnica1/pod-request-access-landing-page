@@ -89,7 +89,7 @@ p {
 }
 
 .form__email-error {
-  display: block;
+  display: none;
   position: absolute;
   left: 35px;
   bottom: -20px;
