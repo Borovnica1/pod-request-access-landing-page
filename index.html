@@ -7,6 +7,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Frontend Mentor | Pod request access landing page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   Publish your podcasts everywhere.
@@ -15,5 +21,10 @@
   Apple Podcasts, Google Podcasts, Pocket Casts and more!
 
   Request access
+  <form class="form">
+    <input type="text" id="email" name="email" placeholder="Email address"><br>
+    <button class="btn btn-primary">Request Access</button>
+    <span class="form__email-error">Oops! Please check your email</span>
+  </form>
 </body>
 </html>

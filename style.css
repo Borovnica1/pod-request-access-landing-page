@@ -1,0 +1,92 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: 'Chivo', sans-serif;
+}
+
+:root {
+  /* 
+    rgb(84,230,175) 
+    rgb(44,52,75)
+    rgb(18,23,37)
+    rgb(255,255,255)
+    rgb(90,102,138)
+    rgb(194,203,229)
+  */
+
+  --primary-color: 84,230,175;
+  --secondary-color: 44,52,75;
+  --seconday-color-light: 90,102,138;
+  --background-color: 18,23,37;
+  --white-color: 255,255,255;
+  --gray-light: 194,203,229;
+
+  --font-size: 26px;
+}
+
+body {
+  height: 100vh;
+  color: rgb(var(--gray-light));
+  font-size: var(--font-size);
+  background-color: rgb(var(--background-color));
+}
+
+.title {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-weight: 700;
+  padding: 0.8rem  1.6rem;
+  border-radius: 100px 100px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: .002s;
+  margin: 5px;
+  white-space: nowrap;
+  background-color: rgb(var(--primary-color));
+}
+
+.btn-primary {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.btn-primary:hover {
+  background-color: rgb(155, 219, 195);
+}
+
+.form {
+  position: relative;
+  width: min-content;
+}
+
+.form input {
+  width: 400px;
+  background-color: rgb(var(--secondary-color));
+  padding: 1.1rem  2.2rem;
+  border: none;
+  border-radius: 100px;
+  color: rgb(var(--white-color));
+}
+
+.form input::placeholder {
+  color:rgb(var(--gray-light));
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form__email-error {
+  display: block;
+  position: absolute;
+  left: 35px;
+  bottom: -20px;
+  color: red;
+  font-size: 12px;
+}
