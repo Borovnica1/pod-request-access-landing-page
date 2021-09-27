@@ -10,21 +10,39 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  Publish your podcasts everywhere.
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
+  <section class="container">
+    <div class="logo">
+      <img src="assets/desktop/logo.svg" alt="Logo image">
+    </div>
 
-  Request access
-  <form class="form">
-    <input type="text" id="email" name="email" placeholder="Email address"><br>
-    <button class="btn btn-primary">Request Access</button>
-    <span class="form__email-error">Oops! Please check your email</span>
-  </form>
+    <article>
+      <h1 class="title"><span class="primary-color-text">Publish your podcasts</span> everywhere.</h1>
+      <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
+        Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+      <form class="form">
+        <input type="text" id="email" name="email" placeholder="Email address"><br>
+        <button class="btn btn-primary">Request Access</button>
+        <span class="form__email-error">Oops! Please check your email</span>
+      </form>
+      <ul class="logos">
+        <img class="logos__logo logos__logo--1" src="assets/desktop/spotify.svg" alt="Spotify logo image"></img>
+        <img class="logos__logo logos__logo--2" src="assets/desktop/apple-podcast.svg" alt="Spotify logo image"></img>
+        <img class="logos__logo logos__logo--3" src="assets/desktop/google-podcasts.svg" alt="Spotify logo image"></img>
+        <img class="logos__logo logos__logo--4" src="assets/desktop/pocket-casts.svg" alt="Spotify logo image"></img>
+      </ul>
+    </article>
+
+    <div class="container__background"></div>
+    <div class="container__dots">
+      <img src="assets/desktop/bg-pattern-dots.svg" alt="Pattern dots svg image">
+    </div>
+  </section>
+
 </body>
 </html>
