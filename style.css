@@ -1,0 +1,371 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 300;
+}
+
+:root {
+  /* 
+    rgb(84,230,175) 
+    rgb(44,52,75)
+    rgb(18,23,37)
+    rgb(255,255,255)
+    rgb(90,102,138)
+    rgb(194,203,229)
+  */
+
+  --primary-color: 84,230,175;
+  --secondary-color: 44,52,75;
+  --seconday-color-light: 90,102,138;
+  --background-color: 18,23,37;
+  --white-color: 255,255,255;
+  --gray-light: 194,203,229;
+
+  --font-size: 20px;
+}
+
+body {
+  height: 100vh;
+  padding: 6% 0 6% 12%;
+  color: rgb(var(--gray-light));
+  background-color: rgb(var(--background-color));
+}
+
+p {
+  font-size: var(--font-size);
+}
+
+.title {
+  font-size: 52px;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-weight: 700;
+  padding: 0.8rem  1.6rem;
+  border-radius: 100px 100px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: .002s;
+  margin: 5px;
+  white-space: nowrap;
+  background-color: rgb(var(--primary-color));
+}
+
+.btn-primary {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.btn-primary:hover {
+  background-color: rgb(155, 219, 195);
+}
+
+.form {
+  position: relative;
+  width: min-content;
+  margin-bottom: 50px;
+}
+
+.form input {
+  width: 400px;
+  background-color: rgb(var(--secondary-color));
+  padding: 1.1rem  2.2rem;
+  border: none;
+  border-radius: 100px;
+  color: rgb(var(--white-color));
+}
+
+.form input::placeholder {
+  color:rgb(var(--gray-light));
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form__email-error {
+  display: none;
+  position: absolute;
+  left: 35px;
+  bottom: -20px;
+  color: red;
+  font-size: 12px;
+}
+
+
+.container {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(5, 20%);
+  grid-template-columns: repeat(3, 33%);
+}
+
+.container .logo {
+}
+
+.container article {
+  background-color: rgb(var(--background-color));
+  grid-area: 2 / 1 / 6 / 3;
+  margin-right: 10%;
+  padding: 10% 10% 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.primary-color-text {
+  color: rgb(var(--primary-color));
+}
+
+.container article p {
+  margin: 2% 30% 2% 0;
+}
+
+.logos {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: .6;
+}
+
+
+.container__background {
+  min-height:100%;
+  background-image:linear-gradient(0deg, rgba(var(--primary-color), .1), rgba(var(--primary-color), .1)), url(assets/desktop/image-host.jpg);
+  background-size:cover;
+  grid-area: 1 / 2 / 6 / 5;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container__dots {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(50%);
+}
+
+@media (max-width: 970px) {
+  body {
+    padding: 0 0 30% 0;
+    position: relative;
+  }
+
+  .container {
+    position: initial;
+  }
+
+  :root {
+    --font-size: 18px;
+  }
+
+  .title {
+    font-size: 46px;
+  }
+
+  .logo {
+    padding: 15% 0 0 10%;
+  }
+
+  .container article {
+    margin-right: -30%;
+    margin-top: 18%;
+    padding: 10% 5% 0 5%;
+  }
+
+  .container__background {
+    background-image:linear-gradient(0deg, rgba(var(--primary-color), .1), rgba(var(--primary-color), .1)), url(assets/tablet/image-host.jpg);
+  }
+
+  .container__dots {
+    bottom: 0;
+    left: 3%;
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 475px) {
+  * {
+    text-align: center;
+  }
+  
+  body {
+    padding: 0 0 0 0;
+    position: relative;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .container {
+    grid-template-columns: 100%;
+    grid-template-rows: 100px;
+  }
+
+  .form {
+    order: 10;
+    width: 100%;
+  }
+
+  .form * {
+    text-align: left;
+  }
+
+  .form input {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .logos__logo {
+    width: 25%;
+  }
+
+  .logo {
+    background-color: rgba(var(--background-color), .8);
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 10% 10%;
+  }
+
+  .container article {
+    background-color: rgba(var(--background-color), .8);
+    grid-area: 2 / 1 / 6 / 3;
+    margin: 0;
+    padding: 0 5%;
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+  }
+
+  .container article p {
+    margin: 20px 0;
+  }
+
+  .container__background {
+    min-height:100%;
+    background:linear-gradient(0deg, rgba(var(--primary-color), .1), rgba(var(--primary-color), .1)), url(assets/mobile/image-host.jpg);
+    grid-area: 1 / 1 / 6 / 2;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .btn-primary {
+    width: 100%;
+    position: initial;
+    padding: 1.1rem  2.2rem;
+    margin: 2% 0;
+  }
+
+  .container__dots {
+    display: none;
+  }
+}
+
+@media (max-width: 325px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
+/* LANDSCAPE */
+
+@media (max-height: 700px) {
+  .container__dots {
+    display: none;
+  }
+}
+
+@media (max-height: 575px) {
+  body {
+    padding: 0;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .form {
+    margin-bottom: 0;
+  }
+
+  .logo {
+    background-color: rgba(var(--background-color), .8);
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 10% 10%;
+  }
+
+  .container article {
+    background-color: rgba(var(--background-color), .8);
+    margin: 0;
+    padding: 5% 5%;
+    margin-top: 0;
+  }
+
+  .container__background {
+    grid-area: 1 / 1 / 6 / 5;
+    background-image:linear-gradient(0deg, rgba(var(--primary-color), .1), rgba(var(--primary-color), .1)), url(assets/desktop/image-host.jpg);
+  }
+}
+
+@media (max-height: 440px){
+  .logo {
+    padding: 5% 10%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+
+
+
+
+@media screen and (max-width: 820px) and (max-height: 400px) {
+  .container {
+    grid-template-columns: repeat(4, 25%);
+  }
+
+  .container article {
+    grid-area: 2 / 1 / 6 / 4;
+  }
+}
+
+@media only screen and (max-width: 650px) and (max-height: 400px) {
+  .container article {
+    grid-area: 2 / 1 / 6 / 5;
+  }
+}
+
+@media (max-height: 375px) {
+  .title {
+    font-size: 25px;
+  }
+
+  .form input {
+    padding: .7rem 1.8rem;
+  }
+
+  .btn {
+    padding: 0.4rem 1.1rem;
+  }
+
+  .logo {
+    padding: 2% 10%;
+  }
+  .container article {
+    grid-area: 2 / 1 / 6 / 5;
+    padding: 0 5% 2%;
+  }
+}
